@@ -1,0 +1,29 @@
+version: '3'
+services:
+  directus:
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+    environment:
+      KEY: '2C7477EC43FA45F834CF68FF315CB'
+      SECRET: '2D81951CD1DCBB684BDD1F4F3BE72'
+      ADMIN_EMAIL: 'admin@example.com'
+      ADMIN_PASSWORD: 'd1r3ctu5'
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: '/directus/database/data.db'
+      TELEMETRY: "false"
+      # WEBSOCKETS_ENABLED: true
+      # CORS_ENABLED: true
+      # CORS_ORIGIN: 'http://localhost:3000'
+      # PUBLIC_URL: 'http://localhost:3000'
+      EMAIL_VERIFY_SETUP: "true"
+      EMAIL_FROM: "jacob@lewisdigitl.co.uk"
+      EMAIL_TRANSPORT: "smtp"
+      EMAIL_SMTP_HOST: "smtp.gmail.com"
+      EMAIL_SMTP_PORT: "465"
+      EMAIL_SMTP_USER: "jacob@lewisdigitl.co.uk"
+      EMAIL_SMTP_PASSWORD: "mwgs ilzx nupy kjdh"
+      EMAIL_SMTP_SECURE: "true"
